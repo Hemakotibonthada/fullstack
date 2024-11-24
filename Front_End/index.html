@@ -4,27 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 1.8rem;
+        }
+
+        a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        select {
+            margin-top: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+    <script>
+        function navigateToPage() {
+            const selectedValue = document.getElementById("Developer").value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1 style="color: red;">This Webpage is Practice Page for Teju and Pavani & Hema Koteswar Naidu.</h1>
-    <a href="https://github.com/Hemakotibonthada/fullstack.git" target="_blank">Our Repo in git</a>
-    <br>
+    <div class="container">
+        <h1>This webpage is for Practice & Work Monitoring </h1>
 
-    <img src="/Front_End/Images/shiva.jpg" alt="shiva" style="height: 300px; width: 300px;">
-    <img src="/Front_End/Images/tcs.JPG" alt="My Image" style="height: 300px; width: 300px;">
-   
-     <h2>Hi, this is a new page</h2>
-    <a href="https://www.linkedin.com/in/ganta-pavani" target="_blank">Come to my LinkedIn page</a>
-    <dev>
-        <p1>My Image</p1><br>
-        <br>
-        <p1>it's Absolute path</p1>
-        <br>
-        <img src="/Front_End/Images/swami.jpeg" alt="swami" style="height: 200px; width: 200px;">
-        <p>Swami Vivekananda4 July 1902, born Narendranath Datta[b] was an Indian Hindu monk, philosopher, author, religious teacher, and the chief disciple of the Indian mystic Ramakrishna.[4][5] He was a key figure in the introduction of Vedanta and Yoga to the Western world.[6][7][8] He is credited with raising interfaith awareness and bringing Hinduism</p>
-        <p1>Here is the image that shows how a banana looks like</p1>
-        <img src="/Front_End/Images/banana.webp" alt="Banana Image" style="height: 200px;width: 300px;">
-    </dev>
-    <p>Now you guys can add your LinkedIn pages</p>
+        <p><a href="https://github.com/Hemakotibonthada/fullstack.git" target="_blank">Our Repository on GitHub</a></p>
+
+        <label for="Developer">Choose a developer name to view their work progress:</label>
+        <select name="Developer" id="Developer" onchange="navigateToPage()">
+            <option value="">--Select Developer--</option>
+            <option value="Hema.html">Hemakoti Bonthada</option>
+            <option value="Teja.html">Tejasri Veeranki</option>
+            <option value="Pavani.html">Pavani Ganta</option>
+            <option value="Shanmitha.html">Shanmitha</option>
+        </select>
+
+        <p class="note">Select a developer to navigate to their page.</p>
+    </div>
 </body>
 </html>
